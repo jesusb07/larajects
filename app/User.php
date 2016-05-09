@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace critipelis;
 
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;

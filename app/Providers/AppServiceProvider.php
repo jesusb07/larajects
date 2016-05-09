@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace critipelis\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace critipelis\Http\Controllers\Auth;
 
-use App\User;
+use critipelis\User;
 use Validator;
-use App\Http\Controllers\Controller;
+use critipelis\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 

@@ -1,0 +1,47 @@
+/* Theme Name:Worthy - Free Powerful Theme by HtmlCoder
+Author:HtmlCoder
+Author URI:http://www.htmlcoder.me
+Version:1.0.0
+Created:November 2014
+License:Creative Commons Attribution 3.0 License (https://creativecommons.org/licenses/by/3.0/)
+File Description:Main CSS file of the template */
+
+/* Typography
+----------------------------------------------------------------------------- */
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+a{
+	color: #fff;
+	transition: all 0.2s ease-in-out;
+}
+a:hover{
+	color: #f7941d;
+}
+
+
+/* HEADER */
+.top-banner{
+	background: black;
+	max-height: 100%;
+}
+@media (min-width: 768px){
+	.navbar {
+		border-radius: 0px;
+	}
+}
+.navbar-logo img{
+	width: 200px; height: 70px;
+}
+.navbar-nav{
+	margin-top: 12px;
+}
+.navbar-inverse .navbar-nav > li > a {
+	color: #fff;
+}
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+	color: #f7941d;
+	background-color: transparent;
+}
+/**FIN HEADER**/

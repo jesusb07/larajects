@@ -140,10 +140,10 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        critipelis\Providers\AppServiceProvider::class,
+        critipelis\Providers\AuthServiceProvider::class,
+        critipelis\Providers\EventServiceProvider::class,
+        critipelis\Providers\RouteServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
 
     ],
