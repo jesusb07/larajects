@@ -1,47 +1,152 @@
-/* Theme Name:Worthy - Free Powerful Theme by HtmlCoder
-Author:HtmlCoder
-Author URI:http://www.htmlcoder.me
-Version:1.0.0
-Created:November 2014
-License:Creative Commons Attribution 3.0 License (https://creativecommons.org/licenses/by/3.0/)
-File Description:Main CSS file of the template */
-
-/* Typography
------------------------------------------------------------------------------ */
 body {
-	font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 a{
-	color: #fff;
-	transition: all 0.2s ease-in-out;
+    color: #fff;
+    transition: all 0.2s ease-in-out;
 }
 a:hover{
-	color: #f7941d;
+    color: #f7941d;
 }
-
 
 /* HEADER */
 .top-banner{
-	background: black;
-	max-height: 100%;
+    background: black;
+    max-height: 100%;
+}
+.top-banner .img-responsive{
+    min-width: 100px;
+    min-height: 40px;
 }
 @media (min-width: 768px){
-	.navbar {
-		border-radius: 0px;
-	}
+    .navbar {
+        border-radius: 0px;
+    }
+}
+.navbar-logo{
+    float: left;
 }
 .navbar-logo img{
-	width: 200px; height: 70px;
+    width: 200px; height: 70px;
 }
-.navbar-nav{
-	margin-top: 12px;
+.navbar-inverse{
+    padding: 0 40px 0 40px;
 }
 .navbar-inverse .navbar-nav > li > a {
-	color: #fff;
+    color: #fff;
 }
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:focus {
-	color: #f7941d;
-	background-color: transparent;
+    color: #f7941d;
+    background-color: transparent;
 }
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+    color: #f7941d;
+    background-color: transparent;
+}
+.navbar-nav {
+    margin-top: 12px;
+}
+.navbar-form{
+    margin-top: 22px;
+}
+.navbar-nav li{
+    padding-right: -10px ;
+}
+.navbar-nav li i{
+    font-size: 18px;
+}
+
+/* login navbar header*/
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    color: #fff;
+    min-width: 300px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    list-style: none;
+    font-size: 14px;
+    text-align: left;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,.15);
+    background-clip: padding-box;
+    border-radius: 4px;
+    color: #fff;
+    background-color: rgba(29,28,28,0.8);
+    border-color: transparent;
+    box-shadow: 0 6px 30px rgba(0,22,68,.6);
+
+}
+
+.fa-user{
+    font-size: 23px;
+}
+@media (min-width: 979px) {
+    ul.nav li.dropdown:hover > ul.dropdown-menu {
+        display: block;
+    }
+}
+ul.nav li.dropdown:hover > ul.dropdown-menu {
+    display: block;
+}
+
+.form-login{
+    padding:30px;
+    text-align: center;
+}
+.passRecovery {
+    color:#dddddd;
+
+}
+
+/* Buttons login navbar */
+.form-login-navbar .btn {
+    padding: 8px 15px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    min-width: 160px;
+    text-align: center;
+    border-radius: 0;
+    text-transform: uppercase;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+.form-login-navbar .btn-default {
+    color: #55acee;
+    border: 1px solid #cccccc;
+}
+.form-login-navbar .btn-default:hover {
+    color: #ffffff;
+    background-color: #339BEB;
+    border-color: #339BEB;
+}
+/**/
+/* Forms login navbar */
+.form-login-navbar .form-control {
+    height: 45px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+.form-login-navbar .form-control-feedback {
+    color: #cccccc;
+}
+.has-feedback label.sr-only ~ .form-control-feedback {
+    top: 15px;
+}
+
+/**/
+/* fin login navbar header*/
+
+
+
 /**FIN HEADER**/

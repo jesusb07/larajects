@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Laravel</title>
+        <title>CritiPelis</title>
         <meta charset="utf-8">
         <meta name=”viewport” content=”width=device-width, initial-scale=1”>
         <meta name="description" content="critipelis, peliculas, criticas, comentarios, series ">
         <meta name="author" content="loreango.inc">
 
-        <link rel="shortcut icon" href="#">
+        <link rel="shortcut icon" href="{{url('images/banners/logo.png')}}">
         {!! Html::style('css/bootstrap.css') !!}
         {!! Html::style('fonts/font-awesome.css') !!}
         {!! Html::style('css/animations.css') !!}
