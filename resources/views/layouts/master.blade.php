@@ -8,9 +8,10 @@
         <meta name="author" content="loreango.inc">
 
         <link rel="shortcut icon" href="{{url('images/banners/logo.png')}}">
-        {!! Html::style('css/bootstrap.css') !!}
+        {!! Html::style('css/plugins/bootstrap.css') !!}
         {!! Html::style('fonts/font-awesome.css') !!}
-        {!! Html::style('css/animations.css') !!}
+        {!! Html::style('css/plugins/animations.css') !!}
+
 
         {!! Html::style('css/style.css') !!}
     </head>
@@ -21,5 +22,8 @@
 
         {!! Html::script('js/plugins/jquery.min.js') !!}
         {!! Html::script('js/plugins/bootstrap.min.js') !!}
+
+
+
     </body>
 </html>

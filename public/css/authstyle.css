@@ -47,3 +47,19 @@ a:hover{
     color: #fff;
 }
 
+.form-control {
+    height: 45px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+.form-control-feedback {
+    color: #cccccc;
+}
+.has-feedback label.sr-only ~ .form-control-feedback {
+    top: 15px;
+}
+textarea {
+    resize: vertical;
+}
+
