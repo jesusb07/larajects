@@ -78,7 +78,7 @@
                             </a>
 
                             <ul class="dropdown-menu pull-center ">
-                               <div class="form-login-navbar">
+                               <div class="form-login">
                                    @include('partials.forms.top_login')
                                </div>
                             </ul>

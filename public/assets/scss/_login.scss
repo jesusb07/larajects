@@ -1,0 +1,52 @@
+.login{
+  margin: 0 auto;
+  max-width: 420px;
+}
+.login-header{
+  padding-top: 40px;
+  margin-bottom: 30px;
+  color: #fff;
+  text-align: center;
+}
+.login-form{
+  padding: 20px;
+  text-align: center;
+
+}
+.btn{
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+
+  &:hover{
+    background-color: #339BEB;
+    color: #fff;
+  }
+}
+.login-footer{
+  color: #a0aab5;
+  text-align: center;
+
+  a{
+    color: #a0aab5;
+    transition: $link_effect;
+    &:hover{
+      color: #fff;
+    }
+  }
+
+}
+.form-control {
+  height: 45px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+.form-control-feedback {
+  color: #cccccc;
+}
+.has-feedback label.sr-only ~ .form-control-feedback {
+  top: 15px;
+}
+textarea {
+  resize: vertical;
+}

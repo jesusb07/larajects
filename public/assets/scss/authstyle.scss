@@ -1,0 +1,19 @@
+/*VARIABLES*/
+
+/*Colors*/
+$link: #fff;
+$link_hover: #4c3346;
+$bg_color:linear-gradient(110deg, #4c3346, #243a5f);
+
+/*Effect*/
+$link_effect: all 0.2s ease-in-out;
+
+/**********/
+/* IMPORTS */
+@import 'login';
+/******/
+body{
+  font-family: 'Raleway', sans-serif;
+  background-image: $bg_color;
+
+}

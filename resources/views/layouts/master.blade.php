@@ -8,12 +8,14 @@
         <meta name="author" content="loreango.inc">
 
         <link rel="shortcut icon" href="{{url('images/banners/logo.png')}}">
-        {!! Html::style('css/plugins/bootstrap.css') !!}
-        {!! Html::style('fonts/font-awesome.css') !!}
-        {!! Html::style('css/plugins/animations.css') !!}
+        <!-- Plugins: bootstrap,animations,fonts-->
+        {!! Html::style('assets/plugins/bootstrap.css') !!}
+        {!! Html::style('assets/fonts/font-awesome.css') !!}
+        {!! Html::style('assets/plugins/animations.css') !!}
+                <!--  core CSS file -->
+        {!! Html::style('assets/css/style.css') !!}
 
 
-        {!! Html::style('css/style.css') !!}
     </head>
     <body>
         <div class="scrollToTop"><i class="icon-up-open-big"></i></div>

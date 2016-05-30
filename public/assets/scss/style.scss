@@ -1,0 +1,26 @@
+/*VARIABLES*/
+
+  /*Colors*/
+  $link: #fff;
+  $link_hover: #f7941d;
+  $btn_blue: #339BEB;
+
+  /*Effect*/
+ $link_effect: all 0.2s ease-in-out;
+
+/**********/
+/* IMPORTS */
+@import 'header';
+/******/
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+a{
+  color: $link;
+  transition: $link_effect;
+}
+a:hover{
+  color: $link_hover;
+}
+

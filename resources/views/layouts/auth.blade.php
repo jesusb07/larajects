@@ -9,16 +9,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Favicon -->
     <link rel="shortcut icon" href="{!! url('images/banners/logo.png') !!}">
-    <!-- Web Fonts -->
 
-            <!-- Bootstrap core CSS -->
-    {!! Html::style('css/plugins/bootstrap.css') !!}
-            <!-- Font Awesome CSS -->
-    {!! Html::style('fonts/font-awesome.css') !!}
-            <!-- Plugins -->
-    {!! Html::style('css/plugins/animations.css') !!}
-            <!-- Worthy core CSS file -->
-    {!! Html::style('css/authstyle.css') !!}
+    <!-- Plugins: bootstrap,animations,fonts-->
+    {!! Html::style('assets/plugins/bootstrap.css') !!}
+    {!! Html::style('assets/fonts/font-awesome.css') !!}
+    {!! Html::style('assets/plugins/animations.css') !!}
+            <!--  core CSS file -->
+    {!! Html::style('assets/css/authstyle.css') !!}
 
 </head>
 <body>
