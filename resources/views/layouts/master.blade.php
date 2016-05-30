@@ -10,10 +10,12 @@
         <link rel="shortcut icon" href="{{url('images/banners/logo.png')}}">
         <!-- Plugins: bootstrap,animations,fonts-->
         {!! Html::style('assets/plugins/bootstrap.css') !!}
+        {!! Html::style('assets/plugins/bootstrap.offcanvas.min.css') !!}
         {!! Html::style('assets/fonts/font-awesome.css') !!}
         {!! Html::style('assets/plugins/animations.css') !!}
                 <!--  core CSS file -->
         {!! Html::style('assets/css/style.css') !!}
+        {!! Html::style('assets/css/offcanvas.css') !!}
 
 
     </head>
@@ -24,6 +26,7 @@
 
         {!! Html::script('js/plugins/jquery.min.js') !!}
         {!! Html::script('js/plugins/bootstrap.min.js') !!}
+        {!! Html::script('js/plugins/bootstrap.offcanvas.js') !!}
 
 
 

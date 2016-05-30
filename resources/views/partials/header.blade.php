@@ -10,7 +10,7 @@
     <nav class="navbar navbar-inverse" role="navigation">
 
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <button type="button" class="navbar-toggle offcanvas-toggle" data-toggle="offcanvas" data-target="#js-bootstrap-offcanvas">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -32,47 +32,31 @@
 
             </div>
 
-            <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
+            <div class="hidden-xs">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#"><i class="fa fa-home"></i></a></li>
                     <li><a href="#">Estrenos</a></li>
                     <li><a href="#">Top Rating</a></li>
                     <li><a href="#">Top Comentadas</a></li>
-                    @if(isset($user))
-                        <li class="dropdown visible-xs visible-sm  ">
+                </ul>
 
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    {!! $user->nickname !!}
-                                    <i class="fa fa-user"></i> <b class="caret"></b>
-                                </a>
-                                <ul class="dropdown-menu pull-center ">
-                                    <li><a href="#">Cuenta</a> </li>
-                                    <li role="separator" class="divider"></li>
-                                    <li><a href="{!! url('logout') !!}">Salir</a> </li>
-                                </ul>
+                <!-- MENU LOGIN sm,md,lg-->
+                <ul class="nav navbar-nav navbar-right  ">
+                   @if(isset($user))
+                    <li class="dropdown hidden-xs">
+                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            {!! $user->nickname !!}
+                             <i class="fa fa-user"></i> <b class="caret"></b>
+                         </a>
+
+                         <ul class="dropdown-menu animated fadeInUp pull-right ">
+                            <li><a href="#">Cuenta</a> </li>
+                             <li role="separator" class="divider"></li>
+                              <li><a href="{!! url('logout') !!}">Salir</a> </li>
+                          </ul>
                         </li>
                     @else
-                    <li class="visible-xs visible-sm"><a href="{!! url('login') !!}">Login/Resgistrate</a></li>
-                    @endif
-                </ul>
-                <ul class="nav navbar-nav navbar-right  ">
-
-
-                        @if(isset($user))
-                        <li class="dropdown visible-lg visible-md ">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                {!! $user->nickname !!}
-                                <i class="fa fa-user"></i> <b class="caret"></b>
-                            </a>
-
-                            <ul class="dropdown-menu animated fadeInUp pull-right ">
-                                <li><a href="#">Cuenta</a> </li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="{!! url('logout') !!}">Salir</a> </li>
-                            </ul>
-                        </li>
-                        @else
-                        <li class="dropdown visible-lg visible-md login-form ">
+                        <li class="dropdown hidden-xs login-form ">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 Login/Registrate <b class="caret"></b>
                             </a>
@@ -82,14 +66,41 @@
                                    @include('partials.forms.top_login')
                                </div>
                             </ul>
-
-                        @endif
-                    </li>
-
+                     @endif
+                         </li>
                 </ul>
-
             </div>
 
-        </nav>
+            <!-- offcanvas mobile sidebar menu -->
+
+        <div class="visible-xs">
+            <div class="navbar-offcanvas navbar-offcanvas-touch navbar-offcanvas-fade " id="js-bootstrap-offcanvas">
+                <div class="offcanvas-header">
+                    <ul class="nav sign">
+                        <li class="pull-left">
+                            <a href="{!! url('login') !!}"><img src="{!! url('images/signin.png') !!}">
+                                <br>Login
+                            </a>
+                        </li>
+                        <li class="pull-right"><a href="#"><img src="{!! url('images/signup.png') !!}">
+                               <br> Registrate
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="nav ">
+                        <li class="active"><a href="#"><i class="fa fa-home"></i></a></li>
+                        <li><a href="#">Estrenos</a></li>
+                        <li><a href="#">Top Rating</a></li>
+                        <li><a href="#">Top Comentadas</a></li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+    </nav>
 
 </header>
