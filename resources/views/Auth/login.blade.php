@@ -1,5 +1,7 @@
 @extends('layouts.auth')
-
+@section('tittle')
+    Critipelis | Iniciar Sesión
+@endsection
 @section('content')
     <div class="container">
         <div class="row">
@@ -49,7 +51,7 @@
                     </div>
                 </div>
                 <div class="login-footer">
-                    <p> <a href="#">Registrate</a> | <a href="{!! url('/') !!}">Volver a CritiPelis</a></p>
+                    <p> <a href="{!! url('registro') !!}">Registrate</a> | <a href="{!! url('/') !!}">Volver a CritiPelis</a></p>
                     <p>
                         © CritiPelis™ 2015-2016 - All rights reserved.
                     </p>

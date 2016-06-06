@@ -1,40 +1,18 @@
-.login{
-  margin: 0 auto;
-  max-width: 420px;
-}
-.login-header{
-  padding-top: 40px;
-  margin-bottom: 30px;
-  color: #fff;
-  text-align: center;
-}
 .login-form{
   padding: 20px;
   text-align: center;
+  .btn{
+    width: 100%;
+    transition: all 0.2s ease-in-out;
 
-}
-.btn{
-  width: 100%;
-  transition: all 0.2s ease-in-out;
-
-  &:hover{
-    background-color: #339BEB;
-    color: #fff;
-  }
-}
-.login-footer{
-  color: #a0aab5;
-  text-align: center;
-
-  a{
-    color: #a0aab5;
-    transition: $link_effect;
     &:hover{
+      background-color: #339BEB;
       color: #fff;
     }
   }
-
 }
+
+
 .form-control {
   height: 45px;
   -webkit-border-radius: 0px;

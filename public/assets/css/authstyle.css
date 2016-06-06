@@ -3,34 +3,14 @@
 /*Effect*/
 /**********/
 /* IMPORTS */
-.login {
-  margin: 0 auto;
-  max-width: 420px; }
-
-.login-header {
-  padding-top: 40px;
-  margin-bottom: 30px;
-  color: #fff;
-  text-align: center; }
-
 .login-form {
   padding: 20px;
   text-align: center; }
-
-.btn {
-  width: 100%;
-  transition: all 0.2s ease-in-out; }
-  .btn:hover {
-    background-color: #339BEB;
-    color: #fff; }
-
-.login-footer {
-  color: #a0aab5;
-  text-align: center; }
-  .login-footer a {
-    color: #a0aab5;
+  .login-form .btn {
+    width: 100%;
     transition: all 0.2s ease-in-out; }
-    .login-footer a:hover {
+    .login-form .btn:hover {
+      background-color: #339BEB;
       color: #fff; }
 
 .form-control {
@@ -48,9 +28,58 @@
 textarea {
   resize: vertical; }
 
+.col-md-4 h4, .col-md-5 h4 {
+  text-align: center;
+  color: #fff;
+  text-decoration: underline; }
+
+.register-form {
+  padding: 20px;
+  text-align: center; }
+  .register-form .form-control {
+    height: 40px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px; }
+
+.register-btn {
+  text-align: center; }
+  .register-btn .btn {
+    width: 100%;
+    transition: all 0.2s ease-in-out;
+    padding: 15px;
+    font-size: 18px;
+    max-width: 300px; }
+  .register-btn .btn-warning {
+    color: #fff;
+    background-color: #d58512;
+    border-color: #eea236; }
+    .register-btn .btn-warning:hover {
+      background-color: #f69f24;
+      border-color: #d58512; }
+
 /******/
 body {
   font-family: 'Raleway', sans-serif;
-  background-image: linear-gradient(110deg, #4c3346, #243a5f); }
+  background-image: linear-gradient(110deg, #a05904, #000); }
+
+.login, .register {
+  margin: 0 auto;
+  max-width: 420px; }
+
+.login-header, .register-header {
+  padding-top: 40px;
+  margin-bottom: 30px;
+  color: #fff;
+  text-align: center; }
+
+.login-footer, .register-footer {
+  color: #a0aab5;
+  text-align: center; }
+  .login-footer a, .register-footer a {
+    color: #a0aab5;
+    transition: all 0.2s ease-in-out; }
+    .login-footer a:hover, .register-footer a:hover {
+      color: #fff; }
 
 /*# sourceMappingURL=authstyle.css.map */

@@ -3,7 +3,7 @@
 /*Colors*/
 $link: #fff;
 $link_hover: #4c3346;
-$bg_color:linear-gradient(110deg, #4c3346, #243a5f);
+$bg_color:linear-gradient(110deg, #a05904, #000);
 
 /*Effect*/
 $link_effect: all 0.2s ease-in-out;
@@ -11,9 +11,33 @@ $link_effect: all 0.2s ease-in-out;
 /**********/
 /* IMPORTS */
 @import 'login';
+@import 'register';
 /******/
 body{
   font-family: 'Raleway', sans-serif;
   background-image: $bg_color;
+
+}
+.login,.register{
+  margin: 0 auto;
+  max-width: 420px;
+}
+.login-header,.register-header{
+  padding-top: 40px;
+  margin-bottom: 30px;
+  color: #fff;
+  text-align: center;
+}
+.login-footer,.register-footer{
+  color: #a0aab5;
+  text-align: center;
+
+  a{
+    color: #a0aab5;
+    transition: $link_effect;
+    &:hover{
+      color: #fff;
+    }
+  }
 
 }

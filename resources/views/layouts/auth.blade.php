@@ -1,7 +1,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>CritiPelis | Iniciar Sesion</title>
+    <title>@yield('tittle')</title>
     <meta name="description" content="critipelis, peliculas, criticas, comentarios, series ">
     <meta name="author" content="loreango.inc">
 

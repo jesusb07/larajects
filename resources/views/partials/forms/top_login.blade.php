@@ -6,6 +6,6 @@
     {!! Form::submit('Entrar',['class'=>'btn btn-primary']) !!}
     {!! Form::close() !!}<br>
 
-    {!! Form::open(['url'=>'login','method'=>'get']) !!}
+    {!! Form::open(['url'=>'registro','method'=>'get']) !!}
     {!! Form::submit('Crear Cuenta',['class'=>'btn btn-warning']) !!}
     {!! Form::close() !!}<br>
