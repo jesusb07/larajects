@@ -13,12 +13,13 @@ class UserTableSeeder extends Seeder
     {
 
         \DB::table('users')->insert(array(
-            'nickname' => 'loreangrey',
+            'username' => 'loreangrey',
             'email' => 'jesuscraf_46@hotmail.com',
             'first_name' => 'Jesus',
             'last_name' => 'Barazarte',
             'birthdate' => '1992-05-07',
             'country' => 'Venezuela',
+            'avatar' => '',
             'password' => \Hash::make('24983515')
         ));
     }

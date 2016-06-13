@@ -11,7 +11,9 @@
 }
 @media (min-width: 768px){
   .navbar {
+
     border-radius: 0px;
+
   }
 }
 .navbar-logo{
@@ -178,10 +180,11 @@ ul.nav li.login-form:hover > ul.dropdown-menu {
 
 
 }
-
-
 /******/
 
-/** CAMBIO DEL COLLAPSE DE NAVBAR */
-
-/**********/
+.navbar-right{
+  img{
+    width: 30px;
+    height: 30px;
+  }
+}

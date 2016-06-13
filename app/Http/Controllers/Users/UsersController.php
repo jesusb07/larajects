@@ -1,13 +1,15 @@
 <?php
 
-namespace critipelis\Http\Controllers;
+namespace critipelis\Http\Controllers\Users;
 
+use critipelis\User;
 use Illuminate\Http\Request;
 
 use critipelis\Http\Requests;
 use critipelis\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
-class UserController extends Controller
+class UsersController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +18,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+
+
     }
 
     /**
@@ -48,7 +51,8 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+
+
     }
 
     /**

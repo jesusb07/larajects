@@ -14,10 +14,18 @@
 Route::get('/', 'WelcomeController@index');
 
 // Authentication routes...
-Route::get('login', 'Auth\AuthController@getLogin');
+Route::get('login',['as'=>'auth/login','uses'=>'Auth\AuthController@getLogin']);
 Route::post('login', ['as' =>'login', 'uses' => 'Auth\AuthController@postLogin']);
 Route::get('logout', ['as' => 'logout', 'uses' => 'Auth\AuthController@getLogout']);
 
 // Registration routes...
 Route::get('registro', 'Auth\AuthController@getRegister');
 Route::post('register', ['as' => 'register', 'uses' => 'Auth\AuthController@postRegister']);
+
+//user routes
+
+Route::group(['middleware' => ['auth'],'namespace' => 'Users'],function(){
+
+    route::get('miperfil','ProfileController@index');
+
+});

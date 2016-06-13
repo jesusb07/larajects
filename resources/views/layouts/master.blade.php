@@ -24,6 +24,8 @@
           @include('partials.header')
              @yield('content')
 
+          @include('partials.footer')
+
         {!! Html::script('js/plugins/jquery.min.js') !!}
         {!! Html::script('js/plugins/bootstrap.min.js') !!}
         {!! Html::script('js/plugins/bootstrap.offcanvas.js') !!}

@@ -73,6 +73,33 @@
     .offcanvas-header .sign li img {
       width: 33px;
       height: 33px; }
+  .offcanvas-header .avatar {
+    color: #fff; }
+    .offcanvas-header .avatar a {
+      text-decoration: none; }
+    .offcanvas-header .avatar img {
+      width: 50px;
+      height: 50px;
+      margin-right: 5px; }
+  .offcanvas-header .list-group {
+    margin-bottom: 0px; }
+    .offcanvas-header .list-group a:focus, .offcanvas-header .list-group a:hover {
+      color: #ee7421;
+      text-decoration: none;
+      background-color: transparent; }
+    .offcanvas-header .list-group #user-menu .list-group-item {
+      border-radius: 0;
+      color: #fff;
+      font-size: 12px;
+      background-color: transparent;
+      border: none;
+      border-bottom: solid 1px #222222; }
+    .offcanvas-header .list-group #user-menu .list-group-item:last-child {
+      border-bottom: none; }
+    .offcanvas-header .list-group #user-menu a:focus, .offcanvas-header .list-group #user-menu a:hover {
+      color: #fff;
+      text-decoration: none;
+      background-color: #ee7421; }
 
 .offcanvas-body {
   margin-left: 20px;

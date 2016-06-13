@@ -24,6 +24,7 @@ class AuthController extends Controller
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
 
     protected $redirectTo = '/';
+    protected $loginPath = 'login';
 
     /**
      * Create a new authentication controller instance.
@@ -58,7 +59,7 @@ class AuthController extends Controller
             'password' => 'required|confirmed|min:6',
             'first_name' => 'required|string|max:255',
             'last_name' => 'required|string|max:255',
-            'birthdate' => 'required|max:255',
+            'birthdate' => 'required|date|max:255',
             'country' => 'required|max:255',
         ]);
     }
@@ -72,8 +73,12 @@ class AuthController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'name' => $data['name'],
+            'nickname' => $data['nickname'],
             'email' => $data['email'],
+            'first_name' => $data['first_name'],
+            'last_name' => $data['last_name'],
+            'brithdate' => $data['birthdate'],
+            'country' => $data['country'],
             'password' => bcrypt($data['password']),
         ]);
     }
