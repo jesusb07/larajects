@@ -46,7 +46,7 @@
                     <li class="dropdown hidden-xs">
                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             {!! $user->username !!}
-                             <img class="img-circle" src="{{url('images/avatars/user1.png')}}"></img> <b class="caret"></b>
+                             <img class="img-circle" src="{{url('images/'.$user->avatar.'')}}"> <b class="caret"></b>
                          </a>
 
                          <ul class="dropdown-menu pull-right ">
@@ -80,7 +80,7 @@
                     <div class="offcanvas-header ">
                         <div class="avatar list-group">
                             <a href="#user-menu" data-toggle="collapse" data-parent="#MainMenu">
-                                <img class="img-circle" src="{!! url('images/avatars/user1.png') !!}">
+                                <img class="img-circle" src="{!! url('images/'.$user->avatar.'') !!}">
                                 <b class="caret"></b>
                             </a>
                             <strong>{!! $user->username !!}</strong>

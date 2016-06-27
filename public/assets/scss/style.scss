@@ -25,6 +25,9 @@ a:hover{
   color: $link_hover;
 
 }
+.btn{
+  transition: $link_effect;
+}
 
 /** FOOTER **/
 /* Social Links

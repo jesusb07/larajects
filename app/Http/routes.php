@@ -26,6 +26,8 @@ Route::post('register', ['as' => 'register', 'uses' => 'Auth\AuthController@post
 
 Route::group(['middleware' => ['auth'],'namespace' => 'Users'],function(){
 
-    route::get('miperfil','ProfileController@index');
+    route::resource('miperfil','ProfileController');
+    Route::post('uploadAvatar',['as' =>'uploadAvatar', 'uses' => 'ProfileController@updateAvatar']);
+
 
 });

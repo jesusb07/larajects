@@ -2,12 +2,16 @@
 
 namespace critipelis\Http\Controllers\Users;
 
+use Carbon\Carbon;
 use critipelis\User;
 use Illuminate\Http\Request;
 
 use critipelis\Http\Requests;
+use critipelis\Http\Requests\EditUserProfileRequest;
+use critipelis\Http\Requests\EditAvatarUserRequest;
 use critipelis\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class ProfileController extends Controller
 {
@@ -19,7 +23,9 @@ class ProfileController extends Controller
     public function index()
     {
         $user = User::find(Auth::user()->id);
-        return view('user.index',compact('user'));
+        //$user= Carbon::createFromFormat('d/m/y', '2001/12/22');
+        return view('user.index',compact('user','birthdate'));
+
     }
 
     /**
@@ -62,7 +68,7 @@ class ProfileController extends Controller
      */
     public function edit($id)
     {
-        //
+
     }
 
     /**
@@ -72,9 +78,24 @@ class ProfileController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(EditUserProfileRequest $request, $id)
     {
-        //
+        $user = User::find(Auth::user()->id);
+        $user->fill($request->all());
+        $birhdate = $request->year.'-'.$request->month.'-'.$request->day;
+        $user->birthdate= Carbon::createFromFormat('Y-m-d',$birhdate);
+        $user->save();
+        Session::flash('message',"Se ha actualizado los datos con exito.");
+        return redirect()->back();
+    }
+
+    public function updateAvatar(EditAvatarUserRequest $request){
+        $user = User::find(Auth::user()->id);
+        $imgName = $user->username.'.'.$request->file('img_avatar')->getClientOriginalExtension();
+        $request->file('img_avatar')->move('images/avatars',$imgName);
+        $user->update(['avatar'=>'avatars/'.$imgName]);
+        Session::flash('message',"Se ha cambiado el avatar con exito.");
+        return redirect()->back();
     }
 
     /**

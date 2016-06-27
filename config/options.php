@@ -238,7 +238,7 @@ return [
         'UY' => 'Uruguay',
         'UZ' => 'Uzbekistan',
         'VU' => 'Vanuatu',
-        'VE' => 'Venezuela',
+        'Venezuela' => 'Venezuela',
         'VN' => 'Viet Nam',
         'VG' => 'Virgin Islands, British',
         'VI' => 'Virgin Islands, U.S.',
@@ -247,7 +247,7 @@ return [
         'YE' => 'Yemen',
         'ZM' => 'Zambia',
         'ZW' => 'Zimbabwe',
-    ]
+    ],
 
 
 

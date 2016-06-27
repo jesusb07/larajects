@@ -2,6 +2,7 @@
 
 namespace critipelis\Http\Controllers\Auth;
 
+use Carbon\Carbon;
 use critipelis\User;
 use Validator;
 use critipelis\Http\Controllers\Controller;
@@ -54,12 +55,14 @@ class AuthController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'nickname' => 'required|max:255|unique:users',
+            'username' => 'required|max:255|unique:users',
             'email' => 'required|email|confirmed|max:255|unique:users',
             'password' => 'required|confirmed|min:6',
             'first_name' => 'required|string|max:255',
             'last_name' => 'required|string|max:255',
-            'birthdate' => 'required|date|max:255',
+            'day' => 'required|numeric|min:1|max:31',
+            'month' => 'required|numeric|min:1|max:12',
+            'year' => 'required|numeric|min:1940:max:2016',
             'country' => 'required|max:255',
         ]);
     }
@@ -72,13 +75,16 @@ class AuthController extends Controller
      */
     protected function create(array $data)
     {
+        $format = $data['year'].'-'.$data['month'].'-'.$data['day'];
+        $birthdate= Carbon::createFromFormat('Y-m-d',$format);
         return User::create([
-            'nickname' => $data['nickname'],
+            'username' => $data['username'],
             'email' => $data['email'],
             'first_name' => $data['first_name'],
             'last_name' => $data['last_name'],
-            'brithdate' => $data['birthdate'],
+            'birthdate' =>  $birthdate,
             'country' => $data['country'],
+            'avatar' => 'default.jpg',
             'password' => bcrypt($data['password']),
         ]);
     }

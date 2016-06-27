@@ -40,7 +40,7 @@
                             <div class="form-group ">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class=" fa fa-user" ></i></span>
-                                    {!! Form::text('nickname',null,['class'=>'form-control','placeholder'=>'Nombre de Usuario','required']) !!}
+                                    {!! Form::text('username',null,['class'=>'form-control','placeholder'=>'Nombre de Usuario','required']) !!}
                                 </div>
                             </div>
                             <div class="form-group ">
@@ -95,7 +95,30 @@
                         <div class="form-group ">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-calendar" ></i></span>
-                                {!! Form::date('birthdate', \Carbon\Carbon::now(),['class'=>'form-control','required']) !!}
+                                <span class="input-group-btn">
+                                     <select name="day" class="form-control" required >
+                                         <option value="" selected>Dia</option>
+                                         @for($i=1;$i<32;$i++)
+                                             <option value="{!! $i !!}">{{$i}}</option>
+                                         @endfor
+                                     </select>
+                                </span>
+                               <span class="input-group-btn">
+                                     <select name="month" class="form-control" required  >
+                                         <option value="" selected>Mes</option>
+                                         @for($i=1;$i<=12;$i++)
+                                             <option value="{!! $i !!}">{{$i}}</option>
+                                         @endfor
+                                     </select>
+                                </span>
+                                <span class="input-group-btn">
+                                     <select name="year" class="form-control" required >
+                                         <option value="" selected>Año</option>
+                                         @for($i=2016;$i>=1940;$i--)
+                                             <option value="{!! $i !!}">{{$i}}</option>
+                                         @endfor
+                                     </select>
+                                </span>
                             </div>
                         </div>
                         <div class="form-group ">
