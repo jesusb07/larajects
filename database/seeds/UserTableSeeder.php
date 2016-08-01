@@ -19,8 +19,8 @@ class UserTableSeeder extends Seeder
             'last_name' => 'Barazarte',
             'birthdate' => '1992-05-07',
             'country' => 'Venezuela',
-            'avatar' => 'default.jpg',
-            'password' => \Hash::make('24983515')
+            'avatar' => 'avatars/loreangrey.jpg',
+            'password' => bcrypt('24983515'),
         ));
     }
 }

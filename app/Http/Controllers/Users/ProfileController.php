@@ -4,11 +4,13 @@ namespace critipelis\Http\Controllers\Users;
 
 use Carbon\Carbon;
 use critipelis\User;
+use critipelis\UserProfile;
 use Illuminate\Http\Request;
 
 use critipelis\Http\Requests;
 use critipelis\Http\Requests\EditUserProfileRequest;
 use critipelis\Http\Requests\EditAvatarUserRequest;
+use critipelis\Http\Requests\EditPasswordUserRequest;
 use critipelis\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
@@ -23,53 +25,13 @@ class ProfileController extends Controller
     public function index()
     {
         $user = User::find(Auth::user()->id);
+
         //$user= Carbon::createFromFormat('d/m/y', '2001/12/22');
-        return view('user.index',compact('user','birthdate'));
+        return view('user.index',compact('user'));
 
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-
-    }
 
     /**
      * Update the specified resource in storage.
@@ -96,6 +58,46 @@ class ProfileController extends Controller
         $user->update(['avatar'=>'avatars/'.$imgName]);
         Session::flash('message',"Se ha cambiado el avatar con exito.");
         return redirect()->back();
+    }
+
+    public function updatePassword(EditPasswordUserRequest $request){
+        $user = User::find(Auth::user()->id);
+        $credentials = [
+            'id' => $user->id,
+            'password' =>  $request->input('current_password')
+        ];
+        if (!Auth::validate($credentials)) { // Checks the User's credentials
+            Session::flash('error_message',"El password actual es incorrecto.");
+            return redirect()->back();
+        }
+       else {
+            $user->password = bcrypt($request->input('new_password'));
+
+        }
+        $user->save();
+        Session::flash('message',"Se ha actualizado el password con exito.");
+        return redirect()->back();
+    }
+    public function updateProfile(Request $request){
+        $user = User::find(Auth::user()->id);
+        $userProfile = $user->userProfile;
+        if(count($userProfile)){
+            $userProfile->fill($request->all());
+            $userProfile->save();
+            Session::flash('message',"Se ha actualizado el perfil con exito.");
+            return redirect()->back();
+        }
+        else{
+            $profile = new UserProfile;
+            $profile->fill($request->all());
+            $user->userProfile()->save($profile);
+
+            Session::flash('message',"Se ha actualizado el perfil con exito.");
+            return redirect()->back();
+
+        }
+
+
     }
 
     /**

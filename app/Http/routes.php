@@ -28,6 +28,6 @@ Route::group(['middleware' => ['auth'],'namespace' => 'Users'],function(){
 
     route::resource('miperfil','ProfileController');
     Route::post('uploadAvatar',['as' =>'uploadAvatar', 'uses' => 'ProfileController@updateAvatar']);
-
-
+    route::post('updatePassword',['as' =>'updatePassword','uses' => 'ProfileController@updatePassword']);
+    route::put('updateProfile',['as' =>'updateProfile','uses'=>'ProfileController@updateProfile']);
 });

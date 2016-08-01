@@ -17,11 +17,11 @@
                             @include('user.partials.form_cuenta')
                         </div>
 
-                        <div id="perfil" class="tab-pane fade">
-                            <h3>En Desarrollo</h3>
+                        <div id="perfil" class="tab-pane fade active">
+                           @include('user.partials.form_profile');
 
                         </div>
-                        <div id="password" class="tab-pane fade">
+                        <div id="password" class="tab-pane fade active">
                             @include('user.partials.form_password')
                         </div>
 

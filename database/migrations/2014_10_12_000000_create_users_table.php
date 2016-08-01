@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration
             $table->date('birthdate');
             $table->string('country');
             $table->string('avatar');
+            $table->enum('status',['activated','disabled']);
             $table->string('password', 60);
             $table->rememberToken();
             $table->timestamps();

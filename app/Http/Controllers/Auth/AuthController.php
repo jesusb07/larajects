@@ -84,7 +84,7 @@ class AuthController extends Controller
             'last_name' => $data['last_name'],
             'birthdate' =>  $birthdate,
             'country' => $data['country'],
-            'avatar' => 'default.jpg',
+            'avatar' => 'avatars/default.jpg',
             'password' => bcrypt($data['password']),
         ]);
     }
