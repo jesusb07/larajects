@@ -18,6 +18,7 @@ class UserTableSeeder extends Seeder
             'first_name' => 'Jesus',
             'last_name' => 'Barazarte',
             'birthdate' => '1992-05-07',
+            'genre' => 'hombre',
             'country' => 'Venezuela',
             'avatar' => 'avatars/loreangrey.jpg',
             'password' => bcrypt('24983515'),

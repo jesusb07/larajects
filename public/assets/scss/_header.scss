@@ -1,3 +1,6 @@
+.navbar-inverse{
+  box-shadow: 3px 3px 3px #101010;
+}
 .top-banner {
   background: black;
   max-height: 100%;
@@ -23,10 +26,14 @@
       width: 200px; height: 70px;
     }
 }
-
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+  color: #f7941d;
+  background-color: transparent;
+}
 .navbar-inverse{
   padding: 0 40px 0 40px;
-
     .navbar-nav {
       margin-top: 12px;
       li {
@@ -34,34 +41,35 @@
         i {
           font-size: 18px;
         }
-
         a {
           color: $link;
-
           &:hover, &:focus {
             color: $link_hover;
             background-color: transparent;
           }
         }
+       .dropdown-menu{
 
+         a{
+           color: $link;
+
+           &:hover{
+             background-color:  $link_hover;
+           }
+         }
+       }
       }
 
-
     }
-
 
     .navbar-form{
       margin-top: 22px;
     }
 
-}
-.navbar-inverse .navbar-nav > .active > a,
-.navbar-inverse .navbar-nav > .active > a:hover,
-.navbar-inverse .navbar-nav > .active > a:focus {
-  color: #f7941d;
-  background-color: transparent;
+
 }
 
+//Dropdown Menu User
 .dropdown-menu {
   position: absolute;
   top: 100%;
@@ -70,7 +78,7 @@
   display: none;
   color: #fff;
   min-width: 160px;
-  padding: 5px 0;
+  padding: 5px 0 ;
   margin: 2px 0 0;
   list-style: none;
   font-size: 14px;
@@ -80,18 +88,9 @@
   background-clip: padding-box;
   border-radius: 4px;
   color: #fff;
-  background-color: #4d4d4d;
+  background-color: #222222;
   border-color: transparent;
   box-shadow: 0 6px 30px rgba(0,22,68,.6);
-
-      a{
-        color: #ccc;
-
-        &:hover{
-          background-color: $link_hover;
-          color: $link;
-        }
-      }
 }
 
 /*dropdown-menu login-form*/
@@ -183,8 +182,67 @@ ul.nav li.login-form:hover > ul.dropdown-menu {
 /******/
 
 .navbar-right{
-  img{
-    width: 30px;
-    height: 30px;
+  background-color: #101010;
+  border-radius: 7px;
+  padding:0 0 0 10px;
+
+   .user-panel{
+     margin-top: 14px;
+     a{
+       padding: 0;
+       float: left;
+
+     }
+     .fa{
+       color: #a0aab5;
+       font-size: 14px;
+       transition: all 0.2s ease-in-out;
+       &:hover{
+         color: #fff;
+
+       }
+     }
+     .fa-bell{
+      margin-right: 15px;
+     }
+
   }
+  .avatar-icon{
+    a{
+      padding: 0;
+    }
+    img{
+      width: 50px;
+      height: 50px;
+    }
+
+   }
+
+
+  .dropdown-toggle{
+    float: left;
+  }
+
 }
+// navbar mobile user-panel
+.user-panel-mobile{
+  margin-left: 75px;
+  margin-bottom: 10px;
+  .fa{
+
+    color: #a0aab5;
+    font-size: 14px;
+    transition: all 0.2s ease-in-out;
+    &:hover{
+      color: #fff;
+
+    }
+  }
+  .fa-bell{
+    margin-right: 10px;
+  }
+
+}
+
+
+/**************/

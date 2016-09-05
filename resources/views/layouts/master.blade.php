@@ -22,7 +22,9 @@
     <body>
         <div class="scrollToTop"><i class="icon-up-open-big"></i></div>
           @include('partials.header')
-             @yield('content')
+        <div class="content">
+            @yield('content')
+        </div>
 
           @include('partials.footer')
 

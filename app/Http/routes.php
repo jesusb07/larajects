@@ -26,8 +26,11 @@ Route::post('register', ['as' => 'register', 'uses' => 'Auth\AuthController@post
 
 Route::group(['middleware' => ['auth'],'namespace' => 'Users'],function(){
 
-    route::resource('miperfil','ProfileController');
+    route::resource('cuenta','ProfileController');
     Route::post('uploadAvatar',['as' =>'uploadAvatar', 'uses' => 'ProfileController@updateAvatar']);
     route::post('updatePassword',['as' =>'updatePassword','uses' => 'ProfileController@updatePassword']);
     route::put('updateProfile',['as' =>'updateProfile','uses'=>'ProfileController@updateProfile']);
+
+    route::resource('usuarios','ProfileController');
+
 });

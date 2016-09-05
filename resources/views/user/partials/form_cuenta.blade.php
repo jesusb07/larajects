@@ -1,4 +1,4 @@
-{!! Form::model($user,['route'=>'miperfil.update',$user,'method'=>'PUT','class'=>'form-cuenta']) !!}
+{!! Form::model($user,['route'=>'cuenta.update','method'=>'PUT','class'=>'form-cuenta']) !!}
 <div class="form-group ">
     <div class="row">
         <div class="col-sm-2">

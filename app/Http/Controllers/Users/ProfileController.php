@@ -31,7 +31,17 @@ class ProfileController extends Controller
 
     }
 
+    public function show($id){
 
+        $user = user::find($id);
+
+        $age = Carbon::createFromDate($user->birthdate->year,$user->birthdate->month,$user->birthdate->day)->age;
+        $joinAge = Carbon::createFromDate($user->created_at->year,$user->created_at->month,$user->created_at->day)->age;
+
+        return view('user.showProfile', compact('user','age','joinAge'));
+
+
+    }
 
     /**
      * Update the specified resource in storage.
@@ -40,7 +50,7 @@ class ProfileController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(EditUserProfileRequest $request, $id)
+    public function update(EditUserProfileRequest $request)
     {
         $user = User::find(Auth::user()->id);
         $user->fill($request->all());

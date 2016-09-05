@@ -2,7 +2,26 @@
 /*Colors*/
 /*Effect*/
 /**********/
+body {
+  font-family: 'Open Sans', sans-serif; }
+
+a {
+  color: #fff;
+  transition: all 0.2s ease-in-out; }
+
+a:hover {
+  color: #f7941d; }
+
+.btn {
+  transition: all 0.2s ease-in-out; }
+
+.content {
+  margin-top: 135px; }
+
 /* IMPORTS */
+.navbar-inverse {
+  box-shadow: 3px 3px 3px #101010; }
+
 .top-banner {
   background: black;
   max-height: 100%; }
@@ -19,6 +38,12 @@
     width: 200px;
     height: 70px; }
 
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+  color: #f7941d;
+  background-color: transparent; }
+
 .navbar-inverse {
   padding: 0 40px 0 40px; }
   .navbar-inverse .navbar-nav {
@@ -32,14 +57,12 @@
         .navbar-inverse .navbar-nav li a:hover, .navbar-inverse .navbar-nav li a:focus {
           color: #f7941d;
           background-color: transparent; }
+      .navbar-inverse .navbar-nav li .dropdown-menu a {
+        color: #fff; }
+        .navbar-inverse .navbar-nav li .dropdown-menu a:hover {
+          background-color: #f7941d; }
   .navbar-inverse .navbar-form {
     margin-top: 22px; }
-
-.navbar-inverse .navbar-nav > .active > a,
-.navbar-inverse .navbar-nav > .active > a:hover,
-.navbar-inverse .navbar-nav > .active > a:focus {
-  color: #f7941d;
-  background-color: transparent; }
 
 .dropdown-menu {
   position: absolute;
@@ -59,14 +82,9 @@
   background-clip: padding-box;
   border-radius: 4px;
   color: #fff;
-  background-color: #4d4d4d;
+  background-color: #222222;
   border-color: transparent;
   box-shadow: 0 6px 30px rgba(0, 22, 68, 0.6); }
-  .dropdown-menu a {
-    color: #ccc; }
-    .dropdown-menu a:hover {
-      background-color: #f7941d;
-      color: #fff; }
 
 /*dropdown-menu login-form*/
 .login-form .dropdown-menu {
@@ -132,19 +150,50 @@ ul.nav li.login-form:hover > ul.dropdown-menu {
     color: #dddddd; }
 
 /******/
-.navbar-right img {
-  width: 30px;
-  height: 30px; }
+.navbar-right {
+  background-color: #101010;
+  border-radius: 7px;
+  padding: 0 0 0 10px; }
+  .navbar-right .user-panel {
+    margin-top: 14px; }
+    .navbar-right .user-panel a {
+      padding: 0;
+      float: left; }
+    .navbar-right .user-panel .fa {
+      color: #a0aab5;
+      font-size: 14px;
+      transition: all 0.2s ease-in-out; }
+      .navbar-right .user-panel .fa:hover {
+        color: #fff; }
+    .navbar-right .user-panel .fa-bell {
+      margin-right: 15px; }
+  .navbar-right .avatar-icon a {
+    padding: 0; }
+  .navbar-right .avatar-icon img {
+    width: 50px;
+    height: 50px; }
+  .navbar-right .dropdown-toggle {
+    float: left; }
 
+.user-panel-mobile {
+  margin-left: 75px;
+  margin-bottom: 10px; }
+  .user-panel-mobile .fa {
+    color: #a0aab5;
+    font-size: 14px;
+    transition: all 0.2s ease-in-out; }
+    .user-panel-mobile .fa:hover {
+      color: #fff; }
+  .user-panel-mobile .fa-bell {
+    margin-right: 10px; }
+
+/**************/
 body {
   background-image: url("../../images/bg.png"); }
 
-.profile-container {
-  margin-top: 140px; }
-
 @media (max-width: 1098px) {
   .profile-container {
-    margin-top: 190px; } }
+    margin-top: 80px; } }
 .nav-tabs li {
   font-weight: bold; }
 .nav-tabs li.active > a,
@@ -175,6 +224,8 @@ body {
     font-weight: bold; }
     .tab-container .update-btn .btn-success:hover {
       background-color: #1bbf1f; }
+  .tab-container .tab-pane {
+    float: inherit; }
 
 .avatar-preview {
   text-align: center; }
@@ -187,23 +238,27 @@ body {
   text-align: center;
   background-color: #c8c8c8; }
 
-/******/
-body {
-  font-family: 'Open Sans', sans-serif; }
+.header-profile {
+  width: 100%;
+  background-color: #222222;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  float: left; }
+  .header-profile .avatar-profile {
+    float: left;
+    margin-right: 15px; }
+    .header-profile .avatar-profile img {
+      width: 100px;
+      height: 100px; }
+  .header-profile .info-profile {
+    float: left;
+    color: #fff; }
+    .header-profile .info-profile strong {
+      font-size: 27px; }
+    .header-profile .info-profile i {
+      font-size: 13px; }
 
-a {
-  color: #fff;
-  transition: all 0.2s ease-in-out; }
-
-a:hover {
-  color: #f7941d; }
-
-.btn {
-  transition: all 0.2s ease-in-out; }
-
-/** FOOTER **/
-/* Social Links
----------------------------------- */
 .subfooter {
   background-color: black;
   border-top: 1px solid #f3f3f3;
@@ -258,5 +313,10 @@ a:hover {
 
 .social-links li.pinterest a:hover {
   color: #cb2027; }
+
+/******/
+/** FOOTER **/
+/* Social Links
+---------------------------------- */
 
 /*# sourceMappingURL=style.css.map */

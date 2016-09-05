@@ -19,6 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('first_name');
             $table->string('last_name');
             $table->date('birthdate');
+            $table->enum('genre',['Hombre','Mujer']);
             $table->string('country');
             $table->string('avatar');
             $table->enum('status',['activated','disabled']);

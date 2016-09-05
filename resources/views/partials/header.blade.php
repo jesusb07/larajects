@@ -43,18 +43,32 @@
                 <!-- MENU LOGIN sm,md,lg-->
                 <ul class="nav navbar-nav navbar-right  ">
                    @if(isset($user))
-                    <li class="dropdown hidden-xs">
-                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            {!! $user->username !!}
-                             <img class="img-circle" src="{{url('images/'.$user->avatar.'')}}"> <b class="caret"></b>
-                         </a>
+                    <li class="user-panel">
+                        <a href="#"><i class="fa fa-bell"></i></a>
+                        <a href="#"><i class="fa fa-envelope"></i></a>
+                    </li>
+                    <li class="dropdown hidden-xs ">
+
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            {!! $user->username !!}<b class="caret"></b>
+                        </a>
+
+
 
                          <ul class="dropdown-menu pull-right ">
-                            <li><a href="{{url('miperfil')}}">Perfil</a> </li>
+                            <li><a href="{{route('usuarios.show',$user)}}">Perfil</a> </li>
+                             <li><a href="{{url('cuenta')}}">Cuenta</a> </li>
                              <li role="separator" class="divider"></li>
                               <li><a href="{!! url('logout') !!}">Salir</a> </li>
                           </ul>
-                        </li>
+                    </li>
+                    <li class="avatar-icon">
+                        <a href="{{route('usuarios.show',$user)}}">
+                        <img class="img-responsive" src="{{url('images/'.$user->avatar.'')}}">
+                        </a>
+                    </li>
+
+
                     @else
                         <li class="dropdown hidden-xs login-form ">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -83,7 +97,12 @@
                                 <img class="img-circle" src="{!! url('images/'.$user->avatar.'') !!}">
                                 <b class="caret"></b>
                             </a>
-                            <strong>{!! $user->username !!}</strong>
+                            <strong>{!! $user->username !!}</strong><br>
+                            <div class="user-panel-mobile">
+                                <a href="#"><i class="fa fa-bell"></i></a>
+                                <a href="#"><i class="fa fa-envelope"></i></a>
+                            </div>
+
                             <div class="collapse" id="user-menu">
                                 <a href="" class="list-group-item">Perfil</a>
 

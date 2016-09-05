@@ -23,7 +23,8 @@ class User extends Model implements AuthenticatableContract,
      * @var string
      */
     protected $table = 'users';
-    protected $dates = ['birthdate'];
+    protected $dates = ['birthdate','create_at'];
+
 
     /**
      * The attributes that are mass assignable.
@@ -41,6 +42,11 @@ class User extends Model implements AuthenticatableContract,
 
     public function userProfile(){
         return $this->hasOne('critipelis\UserProfile');
+    }
+
+    public function scopeId($query,$username){
+
+       $query->where('username',$username);
     }
 
 
